@@ -86,5 +86,24 @@ namespace Regex_Programs
                 Console.ResetColor();
             }
         }
+        public void Password()
+        {
+            Console.WriteLine("Enter Password");
+            string data = Console.ReadLine();
+            string pattern = "^[A-z]{8,}$";
+            Regex regex = new Regex(pattern);
+            if (regex.IsMatch(data))
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine(data + " is a Valid Password");
+                Console.ResetColor();
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine(data + " is a Invalid Password");
+                Console.ResetColor();
+            }
+        }
     }
 }
