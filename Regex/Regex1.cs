@@ -67,5 +67,24 @@ namespace Regex_Programs
                 Console.ResetColor();
             }
         }
+        public void PhoneNumber()
+        {
+            Console.WriteLine("Enter Phone Number");
+            string data = Console.ReadLine();
+            string pattern = "^[6-9]{2}[0-9]{8}?$";
+            Regex regex = new Regex(pattern);
+            if (regex.IsMatch(data))
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine(data + " is a Valid Phone Number");
+                Console.ResetColor();
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine(data + " is a Invalid Phone Number");
+                Console.ResetColor();
+            }
+        }
     }
 }
