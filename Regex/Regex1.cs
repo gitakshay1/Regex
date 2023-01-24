@@ -90,7 +90,7 @@ namespace Regex_Programs
         {
             Console.WriteLine("Enter Password");
             string data = Console.ReadLine();
-            string pattern = "^(?=.*?[A-Z])(?=.*?[0-9]).{8,}$";
+            string pattern = "^(?=.*?[A-Z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$";
             Regex regex = new Regex(pattern);
             if (regex.IsMatch(data))
             {
