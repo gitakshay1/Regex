@@ -48,6 +48,24 @@ namespace Regex_Programs
                 Console.ResetColor();
             }
         }
-
+        public void EmailId()
+        {
+            Console.WriteLine("Enter Email ID");
+            string data = Console.ReadLine();
+            string pattern = "^[A-Za-z]+([.][0-9A-Za-z]+)[@][0-9A-Za-z]+.[a-zA-Z]{2,3}(.[a-zA-Z]{2})?$";
+            Regex regex = new Regex(pattern);
+            if (regex.IsMatch(data))
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine(data + " is a Valid Email ID");
+                Console.ResetColor();
+            }
+            else
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine(data + " is a Invalid Email ID");
+                Console.ResetColor();
+            }
+        }
     }
 }
