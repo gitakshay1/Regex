@@ -16,7 +16,16 @@
                     regex1.LastName();
                     break;
                 case 3:
-                    regex1.EmailId();
+
+                    regex1.EmailId("abc@yahoo.com");
+                    regex1.EmailId("abc-100@yahoo.com");
+                    regex1.EmailId("abc.100@yahoo.com");
+                    regex1.EmailId("abc111@abc.com");
+                    regex1.EmailId("abc-100@abc.net");
+                    regex1.EmailId("abc.100@abc.com.au");
+                    regex1.EmailId("abc@1.com");
+                    regex1.EmailId("abc@gmail.com.com");
+                    regex1.EmailId("abc+100@gmail.com");
                     break;
                 case 4:
                     regex1.PhoneNumber();

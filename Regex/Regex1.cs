@@ -48,10 +48,9 @@ namespace Regex_Programs
                 Console.ResetColor();
             }
         }
-        public void EmailId()
+        public void EmailId(string data)
         {
-            Console.WriteLine("Enter Email ID");
-            string data = Console.ReadLine();
+           
             string pattern = "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\\.[a-zA-Z0-9-]+)*$";
             Regex regex = new Regex(pattern);
             if (regex.IsMatch(data))
