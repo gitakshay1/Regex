@@ -10,10 +10,10 @@
             switch(choise)
             {
                 case 1:
-                    regex1.FirstName();
+                    regex1.FirstName("Akshay");
                     break;
                 case 2:
-                    regex1.LastName();
+                    regex1.LastName("Patil");
                     break;
                 case 3:
 
@@ -28,10 +28,10 @@
                     regex1.EmailId("abc+100@gmail.com");
                     break;
                 case 4:
-                    regex1.PhoneNumber();
+                    regex1.PhoneNumber("8953882239");
                     break;
                 case 5:
-                    regex1.Password();
+                    regex1.Password("A@cnsi9");
                     break;
                 default:
                     Console.WriteLine("Enter Valid choise");
